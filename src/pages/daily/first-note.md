@@ -3,6 +3,7 @@ layout: $/layouts/post.astro
 title: First note in Astro
 description: Test Astro for the first time
 tags:
+  - test
 date: 2023-02-15
 ---
 
