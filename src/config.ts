@@ -40,7 +40,7 @@ export const SITE = {
     // Author: Twitter handler
     authorTwitter: 'williamboulle', // Example: FredKSchott
     // Author: Image external source
-    authorImage: '/assets/wb-alpha.webp', // Example: https://pbs.twimg.com/profile_images/1272979356529221632/sxvncugt_400x400.jpg
+    authorImage: '/brag/assets/wb-alpha.webp', // Example: https://pbs.twimg.com/profile_images/1272979356529221632/sxvncugt_400x400.jpg
 }
 
 // Ink - Theme configuration
