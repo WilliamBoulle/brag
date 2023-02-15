@@ -6,8 +6,8 @@ export const NAV_ITEMS: NavItems = {
         title: 'home'
     },
     blog: {
-        path: '/blog',
-        title: 'blog'
+        path: '/daily',
+        title: 'daily'
     },
     tags: {
         path: '/tags',
@@ -25,9 +25,9 @@ export const NAV_ITEMS: NavItems = {
 
 export const SITE = {
     // Your site's detail?
-    name: 'Ink',
-    title: 'Astro - Ink',
-    description: 'Crisp, minimal, personal blog theme for Astro',
+    name: 'William Boullé',
+    title: 'WB\'s brag',
+    description: 'For dailies and annual work reviews',
     url: 'https://astro-ink.vercel.app',
     githubUrl: 'https://github.com/one-aalam/astro-ink',
     listDrafts: true,
@@ -36,11 +36,11 @@ export const SITE = {
     ytChannelId: '',
     // Optional, user/author settings (example)
     // Author: name
-    author: '', // Example: Fred K. Schott
+    author: 'W. Boullé', // Example: Fred K. Schott
     // Author: Twitter handler
-    authorTwitter: '', // Example: FredKSchott
+    authorTwitter: 'williamboulle', // Example: FredKSchott
     // Author: Image external source
-    authorImage: '', // Example: https://pbs.twimg.com/profile_images/1272979356529221632/sxvncugt_400x400.jpg
+    authorImage: '/assets/wb-alpha.webp', // Example: https://pbs.twimg.com/profile_images/1272979356529221632/sxvncugt_400x400.jpg
 }
 
 // Ink - Theme configuration

@@ -4,6 +4,26 @@ module.exports = {
     /**
      * Color Palette - Purple Heart
      */
+     william: {
+        colors: {
+            primary: colors.teal[700],
+            secondary: colors.teal[800],
+            dark: {
+                primary: colors.teal[300],
+                secondary: colors.teal[500]
+            },
+            accent: {
+                gray: {
+                    light: colors.gray[300],
+                    dark: colors.gray[500]
+                },
+                default: colors.blue[700]
+            }
+        }
+    },
+    /**
+     * Color Palette - Purple Heart
+     */
      purpleheart: {
         colors: {
             primary: colors.purple[700],
@@ -146,11 +166,11 @@ module.exports = {
      */
     default: {
         colors: {
-            primary: colors.purple[700],
-            secondary: colors.purple[800],
+            primary: colors.teal[700],
+            secondary: colors.teal[800],
             dark: {
-                primary: colors.purple[300],
-                secondary: colors.purple[500]
+                primary: colors.teal[300],
+                secondary: colors.teal[500]
             },
             accent: {
                 gray: {
