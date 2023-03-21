@@ -2,29 +2,28 @@ import type{ NavItems } from './types'
 
 export const NAV_ITEMS: NavItems = {
     home: {
-        path: '/',
+        path: '/brag/',
         title: 'home'
     },
     blog: {
-        path: '/daily',
+        path: '/brag/daily',
         title: 'daily'
     },
     tags: {
-        path: '/tags',
+        path: '/brag/tags',
         title: 'tags'
     },
     media: {
-        path: '/media',
+        path: '/brag/media',
         title: 'media'
     },
     about: {
-        path: '/about',
+        path: '/brag/about',
         title: 'about'
     }
 }
 
 export const SITE = {
-    // Your site's detail?
     name: 'William Boullé',
     title: 'WB\'s brag',
     description: 'For dailies and annual work reviews',
