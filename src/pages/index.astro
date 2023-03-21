@@ -11,7 +11,7 @@ const posts = await Astro.glob('./daily/*.md')
 <DefaultPageLayout content={{ title, description }} showPageHeader={false}>
     <PostPreviewList posts={posts} />
     <div class="page__actions">
-        <a class="action__go-to-blog" href="/daily" title="All Posts">All Posts &rarr;</a>
+        <a class="action__go-to-blog" href="/brag/daily" title="All Posts">All Posts &rarr;</a>
     </div>
 </DefaultPageLayout>
 
