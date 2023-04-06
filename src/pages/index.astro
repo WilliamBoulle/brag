@@ -6,12 +6,12 @@ import PostPreviewList from '$/components/PostPreviewList.astro'
 const title = 'Home'
 const description = 'Astro-Ink is a crisp, minimal, personal blog theme for Astro'
 
-const posts = await Astro.glob('./daily/*.md')
+const posts = await Astro.glob('./notes/*.md')
 ---
 <DefaultPageLayout content={{ title, description }} showPageHeader={false}>
     <PostPreviewList posts={posts} />
     <div class="page__actions">
-        <a class="action__go-to-blog" href="/brag/daily" title="All Posts">All Posts &rarr;</a>
+        <a class="action__go-to-blog" href="/brag/notes" title="All Posts">All Posts &rarr;</a>
     </div>
 </DefaultPageLayout>
 

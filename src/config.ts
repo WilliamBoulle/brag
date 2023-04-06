@@ -6,8 +6,8 @@ export const NAV_ITEMS: NavItems = {
         title: 'home'
     },
     blog: {
-        path: '/brag/daily',
-        title: 'daily'
+        path: '/brag/notes',
+        title: 'notes'
     },
     tags: {
         path: '/brag/tags',
@@ -35,7 +35,7 @@ export const SITE = {
     ytChannelId: '',
     // Optional, user/author settings (example)
     // Author: name
-    author: 'W. Boullé', // Example: Fred K. Schott
+    author: 'William Boullé', // Example: Fred K. Schott
     // Author: Twitter handler
     authorTwitter: 'williamboulle', // Example: FredKSchott
     // Author: Image external source
