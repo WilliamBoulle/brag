@@ -36,9 +36,100 @@ I used this two links to achieve the first step.
 
 _I put the docker config inside a `docker` directory_
 
+`docker/Dockerfile`
+
 ~~~bash
-touch docker/Dockerfile
+# use node image in version 12 according to the project
+FROM node:12
+# Create api directory
+WORKDIR /api
+# Copy necessary files to the workdir
+COPY package*.json ./
+COPY src/env.js.sample /api/src/env.js
+
+# Install app dependencies
+RUN NODE_ENV=development npm install
+# Install nodemon globally to be able to run it (see script **dev** in package.json)
+RUN npm i -g nodemon
+
+# Bundle app source
+COPY . .
+
+# Export port 8081 where the API is running
+EXPOSE 8081
+
+# Run the API
+CMD ["npm", "run dev"]
+~~~
+
+After creating the Dockerfile, I build the image with the following command to test it:
+
+~~~bash
+docker build -t api .
+~~~
+
+I open a browser at `http://localhost:8081/documentation` and I see the API running. Good !
+
+**Docker Compose creation**
+
+`docker/docker-compose.yml`
+
+~~~yaml
+services:
+  # name of the service
+  api:
+    build: 
+        # path to the Dockerfile
+        dockerfile: ./docker/Dockerfile
+    # name of the container
+    container_name: api
+    # command to run when the container is started
+    command: npm run dev
+    # ports to expose: host:container API is running on port 8081 inside the container
+    # I expose it on port 8082 on my host because I already have a service running on port 8081
+    ports:
+      - 8082:8081
+    # volumes to mount: host:container
+    volumes:
+      - .:/api
+    # environment variables
+    environment:
+      - NODE_ENV=development
+      - SQL_HOST=mysql
+      - SQL_PORT=3306
+~~~
+
+With that, I can run the API with the following command:
+
+~~~bash
+docker-compose up -d
 ~~~
 
 ### Connect with the main application container
+
+I have to connect the containers so that the main application can call the API.
+
+The main application containers use the **plateforme_plateforme** network.
+
+I have to add the API container to this network.
+
+I add the following lines to the `docker-compose.yml` file:
+
+~~~yaml
+...
+# add the container to the plateforme_plateforme network
+networks:
+  plateforme_plateforme:
+    external: true
+~~~
+
+After rebuild the image and run the container, I can see that the API container is connected to the network with the following command:
+
+~~~bash
+docker network inspect plateforme_plateforme
+~~~
+
+Inside the **"Containers"** section, I have the main application containers and the API container.
+
+A ping from the main application container to the API container works.
 
