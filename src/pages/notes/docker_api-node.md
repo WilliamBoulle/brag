@@ -1,15 +1,15 @@
 ---
 layout: $/layouts/post.astro
 title: Node API Dockerizing
-description: First steps with Docker
+description: First steps with Docker and Node
 tags:
   - docker
   - api
   - node
-date: 2023-04-04
+date: 2023-04-05
 ---
 
-# Node API Dockerizing
+# 
 
 ## Existing
 
@@ -65,14 +65,14 @@ CMD ["npm", "run dev"]
 After creating the Dockerfile, I build the image with the following command to test it:
 
 ~~~bash
-docker build -t api .
+docker build -t api . -f ./docker/Dockerfile
 ~~~
 
 I open a browser at `http://localhost:8081/documentation` and I see the API running. Good !
 
 **Docker Compose creation**
 
-`docker/docker-compose.yml`
+`docker-compose.yml`
 
 ~~~yaml
 services:
@@ -133,3 +133,48 @@ Inside the **"Containers"** section, I have the main application containers and 
 
 A ping from the main application container to the API container works.
 
+---
+
+## Useful commands
+
+### Build the image
+
+```bash
+docker build -t name_of_container .
+```
+
+### Run the container
+
+```bash
+docker compose up -d
+```
+
+### Stop the container
+
+```bash
+docker compose stop
+```
+
+### Connect to the container
+
+```bash
+docker exec -it name_of_container /bin/bash
+```
+
+### List the containers
+
+```bash
+docker ps
+```
+
+### Inspect the network
+
+```bash
+docker network inspect name_of_network
+```
+
+### Inspect a container
+
+```bash
+docker inspect name_of_container
+```
