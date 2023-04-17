@@ -14,7 +14,7 @@ const { content } = Astro.props
     <MainLayout>
         <div class="post__header">
             <div class="post__tags">
-                { content.tags.length > 0 && content.tags.map(tag => <a class="post__tag" href={`/tags/${tag}`} title={tag}>{tag}</a>) }
+                { content.tags.length > 0 && content.tags.map(tag => <a class="post__tag" href={`/brag/tags/${tag}`} title={tag}>{tag}</a>) }
             </div>
             <h1 class="post__title">{ content.title }</h1>
             <h5 class="post__desc">
