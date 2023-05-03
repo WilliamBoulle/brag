@@ -1,11 +1,11 @@
 [
     {
-        "title": "Ship Less JavaScript with Astro",
-        "description": "Astro is a way to build websites that ships zero JavaScript by default. Only add JS when you need it for maximum performance! Fred K. Schott will teach us how it works.",
-        "url": "https://youtu.be/z15YLsLMtu4?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx",
-        "host": "Jason Lengstorf",
-        "participants": ["Fred K. Schott"],
-        "date": "2021-05-08"
+        "title": "L’archi Hexa est-ce archi bien ❓",
+        "description": "✍\uD83C\uDFFF Le but de cet article est de donner une vue d’avion sur ce qu’est l’architecture hexagonale et de faire un retour d’expérience sur son utilisation dans un contexte professionnel.",
+        "url": "https://smaine-milianni.medium.com/larchi-hexa-est-ce-archi-bien-fd0449b32e33",
+        "host": "Smaine Miliannni",
+        "participants": [],
+        "date": "2021-11-02"
     },
     {
         "title": "Astro: A New Architecture for the Modern Web",
